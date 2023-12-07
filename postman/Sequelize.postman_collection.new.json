@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "bb8c3235-118e-4317-b84a-a0602b3532a6",
+		"name": "Sequelize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29296444",
+		"_collection_link": "https://bold-sunset-815859.postman.co/workspace/sample~b58f5d77-de74-43b0-b5a3-808b96c301a1/collection/29296444-bb8c3235-118e-4317-b84a-a0602b3532a6?action=share&source=collection_link&creator=29296444"
+	},
+	"item": [
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n   {\"first_name\": \"Varsha\",\n    \"last_name\": \"RK\",\n    \"email\": \"Varsha@gmail.com\",\n    \"user_name\": \"Varsha@12345\",\n    \"user_password\": \"Varsha@12345\",\n    \"phone_no\":\"7418529630\"\n    } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item_name\":\"ButterScotch\",\n    \"item_content\":\"The rich flavoured Ice cream\",\n    \"item_price\":100,\n    \"item_count\":100\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/add-items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"add-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addRating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ratingValue\":4,\n    \"user_id\":\"6429f967-dcfc-4ca8-884a-0ef202a8139e\",\n    \"item_id\":\"4402c43e-e4d7-4364-affe-c0895237a45c\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/add-rating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"add-rating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddtoCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":\"6429f967-dcfc-4ca8-884a-0ef202a8139e\",\n    \"item_id\":\"4402c43e-e4d7-4364-affe-c0895237a45c\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/add-cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"add-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"6429f967-dcfc-4ca8-884a-0ef202a8139e\",\n    \"item_id\": \"4402c43e-e4d7-4364-affe-c0895237a45c\",\n    \"status\":\"Progress\"\n    \n  \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/add-Purchases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"add-Purchases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search bought items by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/listBoughtItems/6429f967-dcfc-4ca8-884a-0ef202a8139e?search=j",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"listBoughtItems",
+						"6429f967-dcfc-4ca8-884a-0ef202a8139e"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "j"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list bought items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/listBoughtItems/6429f967-dcfc-4ca8-884a-0ef202a8139e/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"listBoughtItems",
+						"6429f967-dcfc-4ca8-884a-0ef202a8139e",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sortPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/listBoughtItems/6429f967-dcfc-4ca8-884a-0ef202a8139e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"listBoughtItems",
+						"6429f967-dcfc-4ca8-884a-0ef202a8139e"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter priceRange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/listBoughtItems/6429f967-dcfc-4ca8-884a-0ef202a8139e/?priceRange=10-60",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"listBoughtItems",
+						"6429f967-dcfc-4ca8-884a-0ef202a8139e",
+						""
+					],
+					"query": [
+						{
+							"key": "priceRange",
+							"value": "10-60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login to create token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"email\": \"Varsha@gmail.com\",\n     \"user_password\": \"Varsha@12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view user details using token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwidXNlcl9pZCI6IjgzNWJiMmZhLTA0ZjctNDNiOC1hMDdlLTQyYzFiZWFmYTc0YyIsImZpcnN0X25hbWUiOiJWYXJzaGEiLCJsYXN0X25hbWUiOiJSSyIsInVzZXJfbmFtZSI6IlZhcnNoYUAxMjM0NSIsImlhdCI6MTcwMTc2NzM0NywiZXhwIjoxNzAxNzcwOTQ3fQ.JgGFC1UGk9Mv0XwWw6NwWcHy9BgtyvdnauXNbnFmCHc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/user/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"user",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \n         \"user_password\": \"Var@12346\"\n}\n          ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/user/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"user",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add favs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"77c06246-2ad7-4487-8e86-e0c6a624d4ad\",\n      \"item_id\": \"5fe9ec72-2a23-4d81-8686-722d8fe8db42\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/favourites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"favourites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get overall rating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/overallRating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"overallRating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "overall rating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/overallRating/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"overallRating",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list the cancelled items",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/cancel/list?priceRange=0-20&user_id=5db36dc1-ceb7-48cb-89d3-e54178358263&sortPrice=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"cancel",
+						"list"
+					],
+					"query": [
+						{
+							"key": "priceRange",
+							"value": "0-20"
+						},
+						{
+							"key": "user_id",
+							"value": "5db36dc1-ceb7-48cb-89d3-e54178358263"
+						},
+						{
+							"key": "sortPrice",
+							"value": "desc"
+						},
+						{
+							"key": "search",
+							"value": "e",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update status to cancel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":\"Cancelled\",\n    \"purchases_id\":\"dcd7bcc5-58c6-4194-97b0-dd2c66a325d5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get favs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1234/getfavourite?user_id=77c06246-2ad7-4487-8e86-e0c6a624d4ad&priceRange=50-105",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"getfavourite"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "77c06246-2ad7-4487-8e86-e0c6a624d4ad"
+						},
+						{
+							"key": "search",
+							"value": "l",
+							"disabled": true
+						},
+						{
+							"key": "sortPrice",
+							"value": "asc",
+							"disabled": true
+						},
+						{
+							"key": "priceRange",
+							"value": "50-105"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
